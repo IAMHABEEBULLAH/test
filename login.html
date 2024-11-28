@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TaskMaster</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex justify-center items-center h-screen bg-gray-100 font-sans">
+
+    <!-- Hero Section -->
+    <section class="bg-blue-900 text-white p-8 rounded-lg w-full max-w-md shadow-lg">
+        <h1 class="text-2xl font-bold mb-6 text-center">Login to TaskMaster</h1>
+
+        <!-- Login Form -->
+        <form id="loginForm" onsubmit="loginUser(event)" class="space-y-4">
+            <!-- Username Field -->
+            <div>
+                <label for="username" class="block text-sm font-medium mb-1">Username:</label>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    required
+                    class="w-full p-2 border border-white rounded bg-blue-800 text-white placeholder-gray-400 focus:ring-2 focus:ring-orange-500 focus:outline-none"
+                    placeholder="Enter your username"
+                />
+            </div>
+
+            <!-- Password Field -->
+            <div>
+                <label for="password" class="block text-sm font-medium mb-1">Password:</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                    class="w-full p-2 border border-white rounded bg-blue-800 text-white placeholder-gray-400 focus:ring-2 focus:ring-orange-500 focus:outline-none"
+                    placeholder="Enter your password"
+                />
+            </div>
+
+            <!-- Submit Button -->
+            <button
+                type="submit"
+                class="w-full p-3 bg-orange-500 rounded text-white font-bold hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 active:scale-95 transition"
+            >
+                Login
+            </button>
+        </form>
+
+        <!-- Switch to Register -->
+        <p class="mt-6 text-center text-sm">
+            Don't have an account? 
+            <a href="register.html" class="text-orange-400 font-medium hover:underline">Click here to register</a>
+        </p>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

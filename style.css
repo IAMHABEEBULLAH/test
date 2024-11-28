@@ -1,0 +1,254 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Titles */
+h2 {
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+/* Button Styling */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Add Document Section */
+.add-document {
+    margin-bottom: 30px;
+    display: none; /* Hidden initially */
+}
+
+.add-document form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-document label {
+    font-weight: bold;
+}
+
+.add-document input,
+.add-document textarea,
+.add-document select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.add-document input:focus,
+.add-document textarea:focus,
+.add-document select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Priority Dropdown */
+.add-document select {
+    background-color: #fff;
+    color: #333;
+    appearance: none;
+}
+
+/* Documents Section */
+.manage-documents {
+    margin-bottom: 30px;
+}
+
+.filters,
+.sorting-options {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filters input {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.filters input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Documents Grid */
+.documents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.document-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.document-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.document-card p {
+    color: #555;
+}
+
+.document-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Priority Styling */
+.priority-high {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.priority-medium {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.priority-low {
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Logout Button */
+#logoutBtn {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#logoutBtn:hover {
+    background-color: #c82333;
+}
+
+/* Support Section */
+.support {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.support h3 {
+    margin-bottom: 10px;
+}
+
+#supportToggle {
+    padding: 8px 12px;
+    background-color: #fff;
+    color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+#supportToggle:hover {
+    background-color: #e6e6e6;
+}
+
+#supportInfo {
+    margin-top: 10px;
+    display: none; /* Hidden initially */
+    color: #fff;
+}
+
+#supportInfo a {
+    color: #ffdd57;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#supportInfo a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .filters,
+    .sorting-options {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    button {
+        font-size: 0.9rem;
+    }
+
+    .documents-grid {
+        grid-template-columns: 1fr;
+    }
+}

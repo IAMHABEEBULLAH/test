@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Button to show the form -->
+        <button id="toggleAddDocumentBtn" onclick="toggleAddDocumentForm()">Create New Task</button>
+        
+        <!-- Add Task Section (Initially Hidden) -->
+        <section class="add-document" id="addDocumentForm" style="display: none;">
+            <h2>Add New Task</h2>
+            <form id="taskForm">
+                <!-- Task Title -->
+                <label for="taskTitle">Task Title:</label>
+                <input type="text" id="taskTitle" name="title" required><br><br>
+
+                <!-- Task Date -->
+                <label for="taskDate">Task Date:</label>
+                <input type="date" id="taskDate" name="date" required><br><br>
+
+                <!-- Task Priority -->
+                <label for="taskPriority">Priority:</label>
+                <select id="taskPriority" name="priority" required>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select><br><br>
+
+                <!-- Task Content -->
+                <label for="taskContent">Task Description:</label>
+                <textarea id="taskContent" name="content" required></textarea><br><br>
+
+                <!-- Add Task Button -->
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+
+        <!-- Tasks Section -->
+        <section class="manage-documents">
+            <h2>Manage Tasks</h2>
+            <div class="filters">
+                <label for="filter">Filter Tasks: </label>
+                <input type="text" id="filter" placeholder="Search tasks...">
+            </div>
+
+            <div class="sorting-options">
+                <button id="sortAlpha">Sort Alphabetically</button>
+                <button id="sortOldNew">Sort by Date</button>
+            </div>
+
+            <!-- Tasks Grid -->
+            <div id="tasksGrid" class="documents-grid">
+                <!-- Cards will be dynamically populated here -->
+            </div>
+        </section>
+
+        <!-- Logout Button -->
+        <button id="logoutBtn">Logout</button>
+    </div>
+
+    <!-- Fixed Support Information at the Bottom -->
+    <section class="support">
+        <h3>Need Help?</h3>
+        <button id="supportToggle">Show Support Info</button>
+        <div id="supportInfo" class="support-info" style="display: none;">
+            <p>Contact Us: <a href="tel:+09039255792">09039255792</a></p>
+            <p>Email: <a href="mailto:anaskabir058@gmail.com">anaskabir058@gmail.com</a></p>
+            <p>Social Media: <a href="https://www.facebook.com/anas.kabir" target="_blank">anas.kabir</a></p>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
